@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5dg — Máy làm sữa hạt: so sánh thông số công bố và đánh giá khách thật</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="description" content="Máy làm sữa hạt: so sánh thông số công bố và đánh giá khách thật, ghi rõ nguồn.">
+<style>
+  @font-face{font-family:"Be Vietnam Pro";font-style:normal;font-weight:400;font-display:swap;src:url("fonts/BeVietnamPro-Regular.ttf") format("truetype")}
+  @font-face{font-family:"Be Vietnam Pro";font-style:normal;font-weight:500;font-display:swap;src:url("fonts/BeVietnamPro-Medium.ttf") format("truetype")}
+  @font-face{font-family:"Be Vietnam Pro";font-style:normal;font-weight:600;font-display:swap;src:url("fonts/BeVietnamPro-SemiBold.ttf") format("truetype")}
+  @font-face{font-family:"Be Vietnam Pro";font-style:normal;font-weight:700;font-display:swap;src:url("fonts/BeVietnamPro-Bold.ttf") format("truetype")}
+  @font-face{font-family:"Be Vietnam Pro";font-style:normal;font-weight:800;font-display:swap;src:url("fonts/BeVietnamPro-ExtraBold.ttf") format("truetype")}
+
+  :root{
+    --cream:#FBF6EE; --paper:#FFFDF8; --ink:#2B2118; --muted:#6B5D4F;
+    --line:#E8DDCB; --accent:#A84A1F; --accent-soft:#F3E3D6; --dark:#2B2118;
+    --r:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Be Vietnam Pro",system-ui,sans-serif;font-size:17px;line-height:1.65;
+    color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .section{padding:96px 0}
+  .section h2{font-size:40px;line-height:1.15;font-weight:800;letter-spacing:-1.2px;margin:16px 0 16px;max-width:640px}
+  .section .lede{color:var(--muted);max-width:640px}
+
+  /* ---------- header ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.96);
+    backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;gap:32px;height:72px}
+  .logo{font-size:28px;font-weight:800;letter-spacing:-1px}
+  .logo span{color:var(--accent)}
+  nav{display:flex;gap:8px}
+  nav a{font-size:15px;font-weight:600;padding:8px 12px;border-radius:999px;color:#4A3E31}
+  nav a:hover{background:var(--accent-soft);color:var(--accent)}
+  .search{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--paper);
+    border:1px solid var(--line);border-radius:999px;padding:8px 16px;min-width:200px;color:var(--muted);font-size:15px}
+  .search svg{flex:none}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;
+    font-weight:700;font-size:16px;padding:12px 24px;border-radius:999px;border:0;cursor:pointer;
+    transition:transform .15s ease-out, box-shadow .15s ease-out}
+  .btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(168,74,31,.28)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn.ghost:hover{box-shadow:none;background:#fff}
+  .btn.sm{padding:10px 20px;font-size:15px}
+
+  /* ---------- hero ---------- */
+  .hero{padding:64px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:32px;align-items:center}
+  .hero-copy{grid-column:1/7}
+  .hero-copy h1{font-size:64px;line-height:1.04;font-weight:800;letter-spacing:-2px;margin:16px 0 24px}
+  .hero-copy h1 em{font-style:normal;color:var(--accent)}
+  .hero-copy p{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:32px}
+  .hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+  .hero-proof{display:flex;gap:24px;flex-wrap:wrap}
+  .hero-proof div{border-left:2px solid var(--accent);padding-left:12px}
+  .hero-proof b{display:block;font-size:20px;font-weight:800;letter-spacing:-.5px}
+  .hero-proof span{font-size:14px;color:var(--muted)}
+  .hero-media{grid-column:7/13}
+  .hero-media figure{border-radius:24px;overflow:hidden;box-shadow:0 24px 64px rgba(43,33,24,.18)}
+  .hero-media img{width:100%;height:560px;object-fit:cover}
+  .hero-media figcaption{display:flex;justify-content:space-between;gap:16px;background:var(--paper);
+    padding:16px 20px;font-size:14px;color:var(--muted);border:1px solid var(--line);border-top:0;
+    border-radius:0 0 24px 24px}
+  .hero-media figcaption b{color:var(--ink)}
+
+  /* ---------- trust strip ---------- */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+  .trust .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-top:32px;padding-bottom:32px}
+  .trust h3{font-size:17px;font-weight:700;margin-bottom:4px}
+  .trust p{font-size:15px;color:var(--muted)}
+
+  /* ---------- articles ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .2s ease-out, box-shadow .2s ease-out}
+  .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(43,33,24,.12)}
+  .card img{width:100%;height:200px;object-fit:cover}
+  .card.featured{grid-column:span 2}
+  .card.featured img{height:280px}
+  .card-body{padding:24px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .tag{display:inline-flex;align-self:flex-start;background:var(--accent-soft);color:var(--accent);
+    font-size:13px;font-weight:700;padding:4px 12px;border-radius:999px}
+  .card h3{font-size:22px;line-height:1.3;font-weight:700;letter-spacing:-.4px}
+  .card.featured h3{font-size:28px;letter-spacing:-.6px}
+  .card p{font-size:15px;color:var(--muted);flex:1}
+  .card time{font-size:14px;color:var(--muted)}
+  .card .more{font-size:15px;font-weight:700;color:var(--accent)}
+  .tile{background:var(--accent);color:#fff;border-radius:var(--r);padding:32px 32px;
+    display:flex;flex-direction:row;align-items:center;gap:32px;grid-column:span 3}
+  .tile>div{flex:1}
+  .tile h3{font-size:26px;line-height:1.25;font-weight:800;letter-spacing:-.5px;margin-bottom:8px}
+  .tile p{color:#FBE9DC;font-size:15px}
+  .tile .btn{background:#fff;color:var(--accent);align-self:center;flex:none}
+
+  /* ---------- how it works ---------- */
+  .how{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .step{border-top:2px solid var(--accent);padding-top:24px}
+  .step b{display:inline-flex;width:48px;height:48px;border-radius:50%;background:var(--accent-soft);
+    color:var(--accent);align-items:center;justify-content:center;font-size:20px;font-weight:800;margin-bottom:16px}
+  .step h3{font-size:20px;font-weight:700;margin-bottom:8px}
+  .step p{font-size:15px;color:var(--muted)}
+
+  /* ---------- complaints ---------- */
+  .warn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .warn{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:32px 24px}
+  .warn .n{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .warn h3{font-size:22px;font-weight:700;margin:12px 0 8px;letter-spacing:-.4px}
+  .warn p{font-size:15px;color:var(--muted)}
+
+  /* ---------- CTA ---------- */
+  .cta-band{background:var(--dark);color:#FBF6EE;border-radius:24px;padding:64px;text-align:center}
+  .cta-band h2{font-size:40px;line-height:1.15;font-weight:800;letter-spacing:-1.2px;margin-bottom:16px}
+  .cta-band p{color:#D8CDBD;max-width:560px;margin:0 auto 32px}
+  .cta-band .btn{margin:0 auto}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--dark);color:#FBF6EE;margin-top:96px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding:64px 0 48px}
+  .foot-grid h4{font-size:15px;font-weight:700;margin-bottom:16px}
+  .foot-grid a{display:block;font-size:15px;color:#D8CDBD;padding:4px 0}
+  .foot-grid a:hover{color:#fff}
+  .foot-grid p{font-size:15px;color:#D8CDBD;max-width:320px}
+  .foot-logo{font-size:28px;font-weight:800;letter-spacing:-1px;margin-bottom:16px}
+  .foot-logo span{color:#E8A87C}
+  .policy{border-top:1px solid rgba(251,246,238,.16);padding:24px 0;font-size:14px;color:#B9AC9A}
+  .policy .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+
+  @media (max-width:900px){
+    .section{padding:64px 0}
+    .section h2{font-size:32px}
+    .bar{gap:16px}
+    nav{display:none}
+    .search{display:none}
+    .hero{padding:40px 0 64px}
+    .hero-copy{grid-column:1/13}
+    .hero-copy h1{font-size:40px;letter-spacing:-1.2px}
+    .hero-media{grid-column:1/13}
+    .hero-media img{height:320px}
+    .trust .wrap{grid-template-columns:1fr;gap:24px}
+    .grid{grid-template-columns:1fr}
+    .card.featured{grid-column:span 1}
+    .steps,.warn-grid{grid-template-columns:1fr}
+    .cta-band{padding:40px 24px}
+    .cta-band h2{font-size:32px}
+    .tile{flex-direction:column;align-items:flex-start;gap:16px;grid-column:span 1}
+    .tile .btn{align-self:flex-start}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+  }
+.logo-img{height:40px;width:auto;display:block}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#"><img class="logo-img" src="img/logo.svg" alt="5dg"></a>
+    <nav>
+      <a href="#tin-moi">Tin mới</a>
+      <a href="#chuyen-muc">Chuyên mục</a>
+      <a href="#huong-dan">Hướng dẫn</a>
+      <a href="#gioi-thieu">Giới thiệu</a>
+    </nav>
+    <label class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      Tìm máy, tìm hạt…
+    </label>
+    <a class="btn sm" href="#tin-moi">Xem Top 5</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Máy làm sữa hạt · Đồ gia dụng nhà bếp</span>
+        <h1>Sữa hạt tự làm, <em>sánh mịn</em> mỗi sáng.</h1>
+        <p>5dg so sánh máy làm sữa hạt theo thông số công bố, đặt cạnh đánh giá khách thật — ghi rõ nguồn và ngày đối chiếu, để cả nhà chọn máy không phải đoán.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#tin-moi">Đọc Top 5 máy làm sữa hạt</a>
+          <a class="btn ghost" href="#huong-dan">Cách chọn máy</a>
+        </div>
+        <div class="hero-proof">
+          <div><b>5 model</b><span>Xếp theo thông số công bố</span></div>
+          <div><b>3 phàn nàn</b><span>Ồn · Khê, trào · Vệ sinh</span></div>
+          <div><b>30/10/2026</b><span>Ngày đối chiếu nguồn</span></div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure>
+          <img src="img/sua-rot-ly.jpg" alt="Rót sữa hạt trắng sánh từ bình thủy tinh vào ly, trên mặt bàn gỗ ấm">
+          <figcaption><span><b>Ly sữa hạt buổi sáng</b> — xay, nấu rồi rót ra dùng ngay</span><span>Ảnh: Unsplash</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust" id="gioi-thieu">
+    <div class="wrap">
+      <div><h3>So sánh bằng thông số công bố</h3><p>Chỉ xếp hạng những gì đối chiếu được từ nguồn công khai, không phóng đại quảng cáo.</p></div>
+      <div><h3>Đặt cạnh đánh giá khách thật</h3><p>Những phàn nàn lặp lại nhiều nhất được nêu thẳng, kèm cách xử lý.</p></div>
+      <div><h3>Ghi rõ nguồn, ngày đối chiếu</h3><p>Mỗi bảng so sánh đều có ngày dữ kiện, để người đọc tự kiểm tra lại.</p></div>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="section" id="tin-moi">
+    <div class="wrap">
+      <span class="eyebrow">Tin mới</span>
+      <h2>Bài viết mới về máy làm sữa hạt</h2>
+      <p class="lede">Từ bảng xếp hạng Top 5 tới cách chọn hạt, xử lý lỗi hay gặp và bữa sáng cùng cả nhà.</p>
+      <div class="grid" id="chuyen-muc">
+        <article class="card featured">
+          <img src="img/hat-dinh-duong.jpg" alt="Các loại hạt dinh dưỡng — hạnh nhân, óc chó, hạt điều, hạt dẻ — xếp trên mặt bàn gỗ">
+          <div class="card-body">
+            <span class="tag">Máy làm sữa hạt</span>
+            <h3>Top 5 máy làm sữa hạt theo thông số công bố + tổng hợp đánh giá khách thật</h3>
+            <p>Xếp 5 model theo thông số công bố đối chiếu được, đặt cạnh ba phàn nàn lặp lại: ồn, khê/trào, vệ sinh.</p>
+            <time>30/10/2026 · Dữ kiện đối chiếu nguồn ngày 30/10/2026</time>
+            <span class="more">Đọc bài viết →</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/hanh-nhan.jpg" alt="Hạnh nhân rang nâu óng, chụp cận cảnh">
+          <div class="card-body">
+            <span class="tag">Chọn hạt</span>
+            <h3>Hạnh nhân, óc chó, hạt điều: hạt nào cho sữa sánh mịn?</h3>
+            <p>Mỗi loại hạt cho một vị và độ sánh khác nhau — chọn đúng hạt, máy nào cũng ngon hơn.</p>
+            <span class="more">Đọc bài viết →</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/hat-ngu-coc.jpg" alt="Hạt ngũ cốc vàng óng, chụp cận cảnh">
+          <div class="card-body">
+            <span class="tag">Hướng dẫn</span>
+            <h3>Ngâm hạt bao lâu trước khi xay?</h3>
+            <p>Ngâm đủ giờ giúp hạt mềm, sữa mịn và máy chạy êm hơn — cùng một trình tự ngâm, xay, nấu.</p>
+            <span class="more">Đọc bài viết →</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/bep-gia-dinh.jpg" alt="Góc bếp gia đình với nồi, chảo và rau củ tươi trên bàn bếp">
+          <div class="card-body">
+            <span class="tag">Xử lý lỗi</span>
+            <h3>Máy ồn, sữa khê, trào khi nấu: nguyên nhân và cách xử lý</h3>
+            <p>Ba phàn nàn gặp nhiều nhất, phần lớn đến từ lượng hạt, lượng nước và cách đặt máy.</p>
+            <span class="more">Đọc bài viết →</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="img/nau-cung-gia-dinh.jpg" alt="Cả nhà cùng nấu ăn trong bếp, không khí ấm cúng">
+          <div class="card-body">
+            <span class="tag">Bếp gia đình</span>
+            <h3>Bữa sáng cùng cả nhà với sữa hạt tự làm</h3>
+            <p>Một mẻ sữa buổi sáng, cả nhà cùng uống — thói quen nhỏ, bếp ấm hẳn lên.</p>
+            <span class="more">Đọc bài viết →</span>
+          </div>
+        </article>
+        <div class="tile">
+          <div>
+            <h3>Chưa biết chọn máy nào?</h3>
+            <p>Bắt đầu từ bảng Top 5: thông số công bố xếp cạnh nhau, đánh giá khách thật nêu thẳng.</p>
+          </div>
+          <a class="btn" href="#tin-moi">Xem bảng Top 5 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how" id="huong-dan">
+    <div class="wrap">
+      <span class="eyebrow">Hướng dẫn</span>
+      <h2>Làm sữa hạt tại nhà chỉ với ba bước</h2>
+      <p class="lede">Máy làm sữa hạt gộp cả xay và nấu vào một lần bấm — việc của người dùng chỉ còn chuẩn bị hạt cho đúng.</p>
+      <div class="steps">
+        <div class="step"><b>1</b><h3>Ngâm hạt</h3><p>Rửa sạch, ngâm hạt cho mềm theo từng loại. Hạt mềm thì sữa mịn, máy cũng đỡ ồn.</p></div>
+        <div class="step"><b>2</b><h3>Xay &amp; nấu</h3><p>Cho hạt và nước đúng vạch, chọn chế độ sữa hạt. Máy tự xay nhuyễn rồi nấu chín.</p></div>
+        <div class="step"><b>3</b><h3>Rót &amp; thưởng thức</h3><p>Rót ra ly khi còn ấm, uống ngay hoặc để nguội cất tủ lạnh dùng trong ngày.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLAINTS -->
+  <section class="section">
+    <div class="wrap">
+      <span class="eyebrow">Đánh giá khách thật</span>
+      <h2>Ba điều khách hay phàn nàn nhất</h2>
+      <p class="lede">Tổng hợp từ đánh giá khách thật trong bài Top 5 — nêu thẳng để người mua biết trước, không mua rồi mới tiếc.</p>
+      <div class="warn-grid">
+        <div class="warn"><span class="n">Phàn nàn 01</span><h3>Máy ồn</h3><p>Tiếng xay lớn vào buổi sáng sớm. Nên xem kỹ thông số độ ồn công bố và đặt máy xa phòng ngủ.</p></div>
+        <div class="warn"><span class="n">Phàn nàn 02</span><h3>Khê, trào khi nấu</h3><p>Sữa dễ trào nếu cho quá nhiều hạt hoặc nước vượt vạch tối đa. Tuân đúng vạch và tỉ lệ là hết phần lớn.</p></div>
+        <div class="warn"><span class="n">Phàn nàn 03</span><h3>Vệ sinh khó</h3><p>Cặn hạt bám đáy cối sau khi nấu. Rửa ngay khi máy còn ấm, dùng chế độ tự vệ sinh nếu máy có.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-band">
+        <h2>Chọn máy bằng dữ kiện, không bằng quảng cáo.</h2>
+        <p>Đọc bảng Top 5: thông số công bố đối chiếu được, đánh giá khách thật nêu thẳng, nguồn và ngày đối chiếu ghi rõ.</p>
+        <a class="btn" href="#tin-moi">Đọc Top 5 máy làm sữa hạt →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-logo"><img class="logo-img" src="img/logo-dark.svg" alt="5dg"></div>
+      <p>Máy làm sữa hạt: so sánh thông số công bố và đánh giá khách thật, ghi rõ nguồn. Viết cho gia đình Việt muốn tự làm sữa hạt tại nhà.</p>
+    </div>
+    <div>
+      <h4>Chuyên mục</h4>
+      <a href="#tin-moi">Tin mới</a>
+      <a href="#chuyen-muc">Máy làm sữa hạt</a>
+      <a href="#huong-dan">Hướng dẫn</a>
+      <a href="#tin-moi">Đánh giá khách thật</a>
+    </div>
+    <div>
+      <h4>Trang</h4>
+      <a href="#gioi-thieu">Giới thiệu</a>
+      <a href="#tin-moi">Top 5 máy làm sữa hạt</a>
+      <a href="#huong-dan">Cách chọn máy</a>
+    </div>
+    <div>
+      <h4>Chính sách</h4>
+      <a href="#">Nội dung tham khảo</a>
+      <a href="#">Nguồn &amp; ngày đối chiếu</a>
+      <a href="#">Liên hệ</a>
+    </div>
+  </div>
+  <div class="policy">
+    <div class="wrap">
+      <span>Nội dung mang tính tham khảo, ghi rõ nguồn và ngày đối chiếu. Giá bán lẻ thay đổi theo người bán và thời điểm, kiểm tra lại trước khi mua.</span>
+      <span>© 2026 5dg · Ảnh: Unsplash, Pexels</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
