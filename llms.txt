@@ -1,0 +1,12 @@
+# 5dg
+
+> 5dg tổng hợp và đối chiếu thông số công bố của đồ gia dụng, đặt cạnh đánh giá dùng thật có nguồn, để người mua tự quyết trước khi mua.
+
+## Bài viết
+
+- [Top 5 máy làm sữa hạt theo thông số công bố + tổng hợp đánh giá khách thật](https://5dg.net/bai/top-5-may-lam-sua-hat/): Xếp 5 model theo thông số công bố đã đối chiếu lại với nguồn ngày 06/11/2026, đặt cạnh ba phàn nàn lặp lại: ồn, khê/trào, vệ sinh.
+- [Chi phí vận hành một năm: cách đọc và đối chiếu thông số hãng](https://5dg.net/bai/chi-phi-van-hanh-mot-nam/): Giá máy chỉ là khoản trả một lần; chi phí vận hành một năm mới cho biết thiết bị nào nuôi tốn - tính bằng công thức ba khoản, rồi đối chiếu từng con số với nguồn độc lập.
+
+## Trang chính
+
+- https://5dg.net/
